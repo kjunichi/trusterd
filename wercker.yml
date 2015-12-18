@@ -17,4 +17,6 @@ build:
         - script:
             name: docker build
             code: |
+              unset DOCKER_HOST
+              env
               docker build -t trusterd_ci .
