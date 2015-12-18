@@ -5,7 +5,8 @@ build:
             name: docker version
             code: |
               uname -a
-              cat /etc/issues
+              cat /etc/issue
+              sudo apt-get update && sudo apt-get upgrade -y
               docker -v
         - script:
             name: docker build
