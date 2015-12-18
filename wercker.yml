@@ -5,6 +5,8 @@ build:
             name: install docker
             code: |
               apt-get -y update && apt-get -y install docker
+              docker -v
+              docker build -t trusterd_ci .
         - script:
             name: docker version
             code: |
