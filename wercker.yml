@@ -13,4 +13,4 @@ build:
         - script:
             name: docker build
             code: |
-              docker build -t trusterd_ci .
+              DOCKER_TLS_VERIFY="1" docker build -t trusterd_ci .
