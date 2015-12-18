@@ -4,10 +4,8 @@ build:
         - script:
             name: install docker
             code: |
-              apt-get -y update && apt-get -y install docker
+              apt-get -y update && apt-get -y install docker.io
               env |grep PATH
-              docker -v
-              docker build -t trusterd_ci .
         - script:
             name: docker version
             code: |
