@@ -9,6 +9,7 @@ build:
               sudo apt-get install -y wget
               wget https://master.dockerproject.org/linux/amd64/docker
               ls -ltr
+              tar zxvf docker.1
               sudo service docker start              
               docker -v
         - script:
