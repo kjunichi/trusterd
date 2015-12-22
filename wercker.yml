@@ -17,5 +17,7 @@ build:
               sudo service docker stop
               ls -l /usr/bin/docker
               sudo cp docker.1 /usr/bin/docker
+              ls -l /usr/bin/docker
               sudo service docker start
+              env
               docker build -t trusterd_ci_1 .
