@@ -17,5 +17,5 @@ build:
               sudo cp docker.1 /usr/bin/docker
               ls -l /usr/bin/docker
               sudo service docker start
-              sudo cat /var/log/docker.log
+              ps auxw|grep docker
               docker build -t trusterd_ci_1 .
