@@ -4,9 +4,7 @@ build:
         - script:
             name: docker version
             code: |
-              uname -a
               cat /etc/issue
-              sudo apt-get install -y wget
               wget https://master.dockerproject.org/linux/amd64/docker
               chmod +x docker.1
               ./docker.1 -v
@@ -19,5 +17,5 @@ build:
               sudo cp docker.1 /usr/bin/docker
               ls -l /usr/bin/docker
               sudo service docker start
-              env
+              cat /var/log/docker.log
               docker build -t trusterd_ci_1 .
