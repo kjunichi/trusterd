@@ -10,9 +10,9 @@ build:
               wget https://master.dockerproject.org/linux/amd64/docker
               ls -ltr
               file docker.1
-              docker.1 -v
+              ./docker.1 -v
               
         - script:
             name: docker build
             code: |
-              docker build -t trusterd_ci_1 .
+              ./docker.1 build -t trusterd_ci_1 .
