@@ -16,5 +16,6 @@ build:
         - script:
             name: docker build
             code: |
-              sudo ./docker daemon &
+              sudo killall docker
+              ls -l /etc/init.d
               ./docker.1 build -t trusterd_ci_1 .
