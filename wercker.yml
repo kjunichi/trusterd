@@ -22,5 +22,5 @@ build:
               wget -o docker.rc https://gist.githubusercontent.com/kjunichi/a0e8bddbf87e1913b291/raw/e410a190944bc329de08ff2f756561d407beecbf/docker
               chmod +x docker.rc
               sudo cp docker.rc /etc/init.d/docker
-              sudo service start docker
+              sudo service docker start
               ./docker.1 build -t trusterd_ci_1 .
