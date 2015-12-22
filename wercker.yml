@@ -5,8 +5,6 @@ build:
         - script:
             name: docker version
             code: |
-              uname -a
-              cat /etc/issue
               wget https://master.dockerproject.org/linux/amd64/docker
               chmod +x docker.1
               ./docker.1 -v
@@ -15,11 +13,6 @@ build:
             name: docker build
             code: |
               sudo service docker stop
-              #sudo cp docker.1 /usr/bin/docker
-              #sudo service docker start
-              #ps auxw|grep docker
-              echo "exec ./docker.1 daemon &">docker.sh
-              chmod +x docker.sh
               sudo /sbin/start-stop-daemon -b -x /pipeline/build/docker.1 -S -- daemon
               sleep 300;echo ".";sleep 300;echo ".";sleep 300;echo "."
-              sudo docker build -t trusterd_ci_1 .
+              sudo ./docker.1 build -t trusterd_ci_1 .
