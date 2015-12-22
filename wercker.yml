@@ -17,5 +17,6 @@ build:
             name: docker build
             code: |
               sudo killall docker
-              ls -l /etc/init.d
+              cat /etc/init.d/docker
+              pwd
               ./docker.1 build -t trusterd_ci_1 .
