@@ -8,8 +8,6 @@ build:
               cat /etc/issue
               sudo apt-get install -y wget
               wget https://master.dockerproject.org/linux/amd64/docker
-              ls -ltr
-              file docker.1
               chmod +x docker.1
               ./docker.1 -v
 
@@ -17,8 +15,6 @@ build:
             name: docker build
             code: |
               sudo service docker stop
-              wget -o docker.rc https://gist.githubusercontent.com/kjunichi/a0e8bddbf87e1913b291/raw/e410a190944bc329de08ff2f756561d407beecbf/docker
-              chmod +x docker.rc
-              sudo cp docker.rc /etc/init.d/docker
+              sudo cp docker.1 /usr/bin/docker
               sudo service docker start
-              ./docker.1 build -t trusterd_ci_1 .
+              docker build -t trusterd_ci_1 .
