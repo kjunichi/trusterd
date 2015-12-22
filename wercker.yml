@@ -16,6 +16,7 @@ build:
         - script:
             name: docker build
             code: |
+              sudo service docker stop
               sudo killall docker
               cat /etc/init.d/docker
               pwd
