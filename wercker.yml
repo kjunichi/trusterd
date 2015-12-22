@@ -21,5 +21,6 @@ build:
               #sudo service docker start
               #ps auxw|grep docker
               echo "exec ./docker.1 daemon &">docker.sh
-              sh docker.sh
-              docker build -t trusterd_ci_1 .
+              chmod +x docker.sh
+              sudo ./docker.sh
+              sudo docker build -t trusterd_ci_1 .
