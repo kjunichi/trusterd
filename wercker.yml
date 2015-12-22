@@ -10,6 +10,7 @@ build:
               wget https://master.dockerproject.org/linux/amd64/docker
               ls -ltr
               file docker.1
+              chmod +x docker.1
               ./docker.1 -v
               
         - script:
