@@ -12,9 +12,9 @@ build:
               file docker.1
               chmod +x docker.1
               ./docker.1 -v
-              sudo ./docker daemon &
-              
+
         - script:
             name: docker build
             code: |
+              sudo ./docker daemon &
               ./docker.1 build -t trusterd_ci_1 .
