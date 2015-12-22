@@ -4,6 +4,7 @@ build:
         - script:
             name: docker version
             code: |
+              uname -a
               cat /etc/issue
               wget https://master.dockerproject.org/linux/amd64/docker
               chmod +x docker.1
@@ -18,7 +19,7 @@ build:
               #sudo cp docker.1 /usr/bin/docker
               #ls -l /usr/bin/docker
               #sudo service docker start
-              ps auxw|grep docker
+              #ps auxw|grep docker
               echo "exec ./docker.1 daemon &">docker.sh
               sh docker.sh
               docker build -t trusterd_ci_1 .
