@@ -13,11 +13,8 @@ build:
         - script:
             name: docker build
             code: |
-              ps auxw|grep docker
               sudo service docker stop
-              ls -l /usr/bin/docker
               #sudo cp docker.1 /usr/bin/docker
-              #ls -l /usr/bin/docker
               #sudo service docker start
               #ps auxw|grep docker
               echo "exec ./docker.1 daemon &">docker.sh
