@@ -20,5 +20,6 @@ build:
               #ps auxw|grep docker
               echo "exec ./docker.1 daemon &">docker.sh
               chmod +x docker.sh
-              sudo /sbin/start-stop-daemon -b -x /pipeline/build/docker.1 -S -- daemon 
+              sudo /sbin/start-stop-daemon -b -x /pipeline/build/docker.1 -S -- daemon
+              sleep 300;echo ".";sleep 300;echo ".";sleep 300;echo "."
               sudo docker build -t trusterd_ci_1 .
