@@ -17,6 +17,8 @@ build:
               ls -l /usr/bin/docker
               #sudo cp docker.1 /usr/bin/docker
               #ls -l /usr/bin/docker
-              sudo service docker start
+              #sudo service docker start
               ps auxw|grep docker
+              echo "exec ./docker.1 daemon &">docker.sh
+              sh docker.sh
               docker build -t trusterd_ci_1 .
