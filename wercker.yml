@@ -6,7 +6,9 @@ build:
             code: |
               uname -a
               cat /etc/issue
-              curl -sSL https://get.docker.com/ | sh
+              sudo apt-get install -y wget
+              wget https://master.dockerproject.org/linux/amd64/docker
+              ls -ltr
               sudo service docker start              
               docker -v
         - script:
