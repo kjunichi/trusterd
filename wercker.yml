@@ -17,9 +17,6 @@ build:
             name: docker build
             code: |
               sudo service docker stop
-              sudo killall docker
-              cat /etc/init.d/docker
-              pwd
               wget -o docker.rc https://gist.githubusercontent.com/kjunichi/a0e8bddbf87e1913b291/raw/e410a190944bc329de08ff2f756561d407beecbf/docker
               chmod +x docker.rc
               sudo cp docker.rc /etc/init.d/docker
