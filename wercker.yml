@@ -8,13 +8,9 @@ build:
               wget https://master.dockerproject.org/linux/amd64/docker
               chmod +x docker.1
               sudo service docker stop
-              date
               sudo /sbin/start-stop-daemon -b -x /pipeline/build/docker.1 -S -- daemon
-              date
               ./docker.1 ps
-              sleep 300;echo ".";sleep 300;echo ".";sleep 300;echo "."
               ./docker.1 -v
-              ./docker.1 ps
 
         - script:
             name: docker build
